@@ -7,10 +7,18 @@ Intro to the D3.js JavaScript Library
 * Uses HTML, CSS, JavaScript, and SVG languages
 * D3 is extremely fash, supports large data sets and dynamic behaviors for interaction and animation
 
+### SetUp:
+
 To use D3, include the following script tag in your html file:
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+```
+
+Then, run a local web server:
+
+```
+python -m SimpleHTTPServer 8888 &
 ```
 
 ### Documentation:
