@@ -47,18 +47,18 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-//x-axis: alphabet - ordinal scale 
+//defining x-axis: alphabet - ordinal scale 
 //adding ordinal scale to map discrete alphabet data values (ie. categories, names, etc.) to corresponding set of display values
-//rangeBands method computes range values so as to divide chart area into evenly-spaced and evenly-sized bands in pie chart
+//rangeBands method computes range values to divide chart area into evenly-spaced and evenly-sized bands in pie chart
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
 
-//y-axis: frequency - linear scale
+//defining y-axis: frequency - linear scale
 //linear scale handles numerical values
 var y = d3.scale.linear()
     .range([height, 0]);
 
-//Creates x-axis and y-axis ticker compnents
+//Creates x-axis and y-axis ticker component and styles
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
@@ -83,13 +83,13 @@ d3.tsv("data.tsv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.letter; }));
   y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
-// appends g element to x-axis alphabet 
+// appends x-axis alphabet classes to new svg element and calls xAxis
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
-// appends g element to y-axis frequency 
+// appends y-axis frequency classes to new svg element and calls yAxis, adds title, label text
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis)
@@ -100,7 +100,7 @@ d3.tsv("data.tsv", type, function(error, data) {
       .style("text-anchor", "end")
       .text("Frequency");
 
-// inititates data join by defining selection to which we join data
+// defines selection to which we join data
   svg.selectAll(".bar")
   //joining the data
       .data(data)
