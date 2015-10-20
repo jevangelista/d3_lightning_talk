@@ -5,7 +5,7 @@ Intro to the D3.js JavaScript Library
 
 * A JavaScript library for data visualization
 * Uses HTML, CSS, JavaScript, and SVG languages
-* D3 is extremely fash, supports large data sets and dynamic behaviors for interaction and animation
+* D3 is extremely fast, supports large data sets and dynamic behaviors for interaction and animation
 
 ### SetUp:
 
