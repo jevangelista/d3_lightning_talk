@@ -1,7 +1,7 @@
 # D3.js Lightning Talk
 Intro to the D3.js JavaScript Library
 
-Overview:
+### Overview:
 
 * A JavaScript library for data visualization
 * Uses HTML, CSS, JavaScript, and SVG languages
@@ -9,7 +9,8 @@ Overview:
 
 To use D3, include the following script tag in your html file:
 
-```<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 ```
 
 ### Documentation:
